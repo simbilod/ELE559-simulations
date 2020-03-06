@@ -11,29 +11,7 @@ https://myadroit.princeton.edu/
 git clone https://github.com/simbilod/ELE559-simulations
 ```
 
-## Create and enable isolated conda environment
+## Using the Notebooks
 
-Change directory (cd) into the course folder, then type:
-
-```
-# cd ELE559-simulations
-conda env create -f environment.yml
-conda activate mp
-```
-
-## Install JupyterLab Ipykernel
-
-```
-conda activate mp
-conda install ipykernel
-ipython kernel install --user --name=PyMeep
-conda deactivate
-```
-
-## (For 3D plotting : optional) Make sure extension is enabled in JupyterLab
-
-conda install -c conda-forge nodejs
-jupyter labextension install @jupyter-widgets/jupyterlab-manager
-jupyter labextension install ipyvolume
-jupyter labextension install jupyter-threejs
+You should see multiple Python environments when you log in (mp, pmp, layout, etc.). Make sure you select the "mp" environments when you boot the Notebooks. You can change what environment you are running on by clicking the text besides the dot on the top right.
 
