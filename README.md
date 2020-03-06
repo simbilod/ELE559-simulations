@@ -23,9 +23,11 @@ git clone https://github.com/simbilod/ELE559-simulations
 
 Under "My interactive sessions", click on Jupyter for classes :
 
-![jupyterlab](images/jupyterlab.png)
+![jupyterlab](images/lab_access.png)
 
 Optionally, check the box for Jupyter Lab. Fill in your requested time and cores (be considerate to other users). Then click launch. When the environment is ready, launch it.
+
+![jupyterlab](images/jupyterlab.png)
 
 ## Using the Notebooks
 
