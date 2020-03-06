@@ -29,7 +29,7 @@ Optionally, check the box for Jupyter Lab. Fill in your requested time and cores
 
 ![jupyterlab](images/jupyterlab.png)
 
-## Using the Notebooks
+## Opening a Notebook
 
 You will see an interface like this :
 
@@ -38,3 +38,10 @@ You will see an interface like this :
 You should see multiple Python environments when you log in (mp, pmp, layout, etc.). Make sure you select the "mp" environments when you boot the Notebooks. You can change what environment you are running on by clicking the text besides the dot on the top right :
 
 ![env](images/env.png)
+
+## Using a Notebook
+
+Execute a cell by pressing `shift+enter`. The output will be displayed right underneath. The added text should provide enough context to follow!
+
+More on Jupyter Notebooks : https://www.dataquest.io/blog/jupyter-notebook-tutorial/
+
