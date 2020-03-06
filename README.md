@@ -20,6 +20,16 @@ conda activate mp
 ## Install JupyterLab Ipykernel
 
 ```
-TODO
+conda activate mp
+conda install ipykernel
+ipython kernel install --user --name=PyMeep
+conda deactivate
 ```
+
+## (For 3D plotting : optional) Make sure extension is enabled in JupyterLab
+
+conda install -c conda-forge nodejs
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+jupyter labextension install ipyvolume
+jupyter labextension install jupyter-threejs
 
