@@ -1,0 +1,424 @@
+Using MPI version 3.1, 10 processes
+-----------
+Initializing structure...
+Splitting into 10 chunks evenly
+time for choose_chunkdivision = 0.0624609 s
+Working in 2D dimensions.
+Computational cell is 10 x 10 x 0 with resolution 128
+     prism, center = (3.17815,-1.82185,0)
+          height 0, axis (0,0,1), 192 vertices:
+          (4.75,-5.002,0)
+          (4.749,-4.925,0)
+          (4.748,-4.849,0)
+          (4.745,-4.774,0)
+          (4.735,-4.624,0)
+          (4.728,-4.548,0)
+          (4.721,-4.474,0)
+          (4.712,-4.399,0)
+          (4.702,-4.324,0)
+          (4.69,-4.249,0)
+          (4.678,-4.175,0)
+          (4.664,-4.101,0)
+          (4.649,-4.027,0)
+          (4.633,-3.954,0)
+          (4.616,-3.88,0)
+          (4.598,-3.807,0)
+          (4.578,-3.734,0)
+          (4.558,-3.662,0)
+          (4.536,-3.59,0)
+          (4.513,-3.518,0)
+          (4.489,-3.446,0)
+          (4.464,-3.375,0)
+          (4.41,-3.235,0)
+          (4.381,-3.165,0)
+          (4.352,-3.096,0)
+          (4.321,-3.027,0)
+          (4.289,-2.958,0)
+          (4.256,-2.891,0)
+          (4.222,-2.823,0)
+          (4.187,-2.757,0)
+          (4.151,-2.691,0)
+          (4.114,-2.625,0)
+          (4.075,-2.56,0)
+          (4.036,-2.496,0)
+          (3.996,-2.432,0)
+          (3.955,-2.369,0)
+          (3.912,-2.306,0)
+          (3.869,-2.245,0)
+          (3.825,-2.184,0)
+          (3.78,-2.123,0)
+          (3.734,-2.064,0)
+          (3.687,-2.005,0)
+          (3.639,-1.947,0)
+          (3.59,-1.889,0)
+          (3.54,-1.833,0)
+          (3.489,-1.777,0)
+          (3.438,-1.722,0)
+          (3.385,-1.668,0)
+          (3.332,-1.615,0)
+          (3.278,-1.562,0)
+          (3.223,-1.511,0)
+          (3.167,-1.46,0)
+          (3.111,-1.41,0)
+          (3.053,-1.361,0)
+          (2.995,-1.313,0)
+          (2.936,-1.266,0)
+          (2.877,-1.22,0)
+          (2.816,-1.175,0)
+          (2.755,-1.131,0)
+          (2.694,-1.088,0)
+          (2.631,-1.045,0)
+          (2.568,-1.004,0)
+          (2.504,-0.964,0)
+          (2.44,-0.925,0)
+          (2.375,-0.886,0)
+          (2.309,-0.849,0)
+          (2.243,-0.813,0)
+          (2.177,-0.778,0)
+          (2.109,-0.744,0)
+          (2.042,-0.711,0)
+          (1.973,-0.679,0)
+          (1.904,-0.648,0)
+          (1.835,-0.619,0)
+          (1.765,-0.59,0)
+          (1.625,-0.536,0)
+          (1.554,-0.511,0)
+          (1.482,-0.487,0)
+          (1.41,-0.464,0)
+          (1.338,-0.442,0)
+          (1.266,-0.422,0)
+          (1.193,-0.402,0)
+          (1.12,-0.384,0)
+          (1.046,-0.367,0)
+          (0.973,-0.351,0)
+          (0.899,-0.336,0)
+          (0.825,-0.322,0)
+          (0.751,-0.31,0)
+          (0.676,-0.298,0)
+          (0.601,-0.288,0)
+          (0.526,-0.279,0)
+          (0.452,-0.272,0)
+          (0.376,-0.265,0)
+          (0.226,-0.255,0)
+          (0.151,-0.252,0)
+          (0.075,-0.251,0)
+          (-0.002,-0.25,0)
+          (0.002,0.25,0)
+          (0.083,0.249,0)
+          (0.167,0.247,0)
+          (0.25,0.244,0)
+          (0.333,0.239,0)
+          (0.416,0.233,0)
+          (0.499,0.226,0)
+          (0.582,0.218,0)
+          (0.665,0.208,0)
+          (0.747,0.197,0)
+          (0.83,0.184,0)
+          (0.912,0.17,0)
+          (0.994,0.155,0)
+          (1.075,0.139,0)
+          (1.157,0.121,0)
+          (1.238,0.102,0)
+          (1.319,0.082,0)
+          (1.399,0.06,0)
+          (1.479,0.037,0)
+          (1.559,0.013,0)
+          (1.638,-0.012,0)
+          (1.717,-0.039,0)
+          (1.796,-0.067,0)
+          (1.874,-0.096,0)
+          (1.951,-0.126,0)
+          (2.105,-0.19,0)
+          (2.181,-0.224,0)
+          (2.331,-0.296,0)
+          (2.406,-0.334,0)
+          (2.479,-0.372,0)
+          (2.553,-0.412,0)
+          (2.625,-0.453,0)
+          (2.697,-0.496,0)
+          (2.768,-0.539,0)
+          (2.838,-0.583,0)
+          (2.908,-0.629,0)
+          (2.977,-0.676,0)
+          (3.045,-0.723,0)
+          (3.113,-0.772,0)
+          (3.179,-0.822,0)
+          (3.245,-0.873,0)
+          (3.31,-0.925,0)
+          (3.375,-0.978,0)
+          (3.438,-1.032,0)
+          (3.501,-1.087,0)
+          (3.562,-1.143,0)
+          (3.623,-1.2,0)
+          (3.683,-1.258,0)
+          (3.742,-1.317,0)
+          (3.8,-1.377,0)
+          (3.857,-1.438,0)
+          (3.913,-1.499,0)
+          (3.968,-1.562,0)
+          (4.022,-1.625,0)
+          (4.075,-1.69,0)
+          (4.127,-1.755,0)
+          (4.178,-1.821,0)
+          (4.228,-1.887,0)
+          (4.277,-1.955,0)
+          (4.324,-2.023,0)
+          (4.371,-2.092,0)
+          (4.417,-2.162,0)
+          (4.461,-2.232,0)
+          (4.504,-2.303,0)
+          (4.547,-2.375,0)
+          (4.588,-2.447,0)
+          (4.628,-2.521,0)
+          (4.666,-2.594,0)
+          (4.704,-2.669,0)
+          (4.776,-2.819,0)
+          (4.81,-2.895,0)
+          (4.874,-3.049,0)
+          (4.904,-3.126,0)
+          (4.933,-3.204,0)
+          (4.961,-3.283,0)
+          (4.988,-3.362,0)
+          (5.013,-3.441,0)
+          (5.037,-3.521,0)
+          (5.06,-3.601,0)
+          (5.082,-3.681,0)
+          (5.102,-3.762,0)
+          (5.121,-3.843,0)
+          (5.139,-3.925,0)
+          (5.155,-4.006,0)
+          (5.17,-4.088,0)
+          (5.184,-4.17,0)
+          (5.197,-4.253,0)
+          (5.208,-4.335,0)
+          (5.218,-4.418,0)
+          (5.226,-4.501,0)
+          (5.233,-4.584,0)
+          (5.239,-4.667,0)
+          (5.244,-4.75,0)
+          (5.247,-4.833,0)
+          (5.249,-4.917,0)
+          (5.25,-4.998,0)
+          dielectric constant epsilon diagonal = (12,12,12)
+     prism, center = (-1.25,0,0)
+          height 0, axis (0,0,1), 4 vertices:
+          (-2.5,-0.25,0)
+          (-2.5,0.25,0)
+          (0,0.25,0)
+          (0,-0.25,0)
+          dielectric constant epsilon diagonal = (12,12,12)
+     prism, center = (5,-6.25,0)
+          height 0, axis (0,0,1), 4 vertices:
+          (4.75,-7.5,0)
+          (4.75,-5,0)
+          (5.25,-5,0)
+          (5.25,-7.5,0)
+          dielectric constant epsilon diagonal = (12,12,12)
+time for set_epsilon = 0.153994 s
+-----------
+MPB solved for omega_1(2.2349,0,0) = 0.682944 after 40 iters
+MPB solved for omega_1(2.10026,0,0) = 0.645245 after 4 iters
+MPB solved for omega_1(2.09996,0,0) = 0.645161 after 2 iters
+MPB solved for omega_1(2.09996,0,0) = 0.645161 after 1 iters
+Meep progress: 3.16015625/177.5 = 1.8% done in 4.0s, 220.9s to go
+on time step 809 (time=3.16016), 0.00494869 s/step
+Meep progress: 6.18359375/177.5 = 3.5% done in 8.0s, 221.9s to go
+on time step 1583 (time=6.18359), 0.0051744 s/step
+Meep progress: 9.14453125/177.5 = 5.2% done in 12.0s, 221.2s to go
+on time step 2341 (time=9.14453), 0.00528255 s/step
+Meep progress: 12.2890625/177.5 = 6.9% done in 16.0s, 215.3s to go
+on time step 3146 (time=12.2891), 0.00497165 s/step
+Meep progress: 15.6171875/177.5 = 8.8% done in 20.0s, 207.5s to go
+on time step 3998 (time=15.6172), 0.00469491 s/step
+Meep progress: 18.953125/177.5 = 10.7% done in 24.0s, 200.9s to go
+on time step 4852 (time=18.9531), 0.00468724 s/step
+Meep progress: 22.28515625/177.5 = 12.6% done in 28.0s, 195.2s to go
+on time step 5705 (time=22.2852), 0.00469088 s/step
+Meep progress: 25.61328125/177.5 = 14.4% done in 32.0s, 189.9s to go
+on time step 6557 (time=25.6133), 0.0046964 s/step
+Meep progress: 27.1328125/177.5 = 15.3% done in 36.2s, 200.4s to go
+on time step 6946 (time=27.1328), 0.0106319 s/step
+Meep progress: 28.90625/177.5 = 16.3% done in 40.2s, 206.9s to go
+on time step 7400 (time=28.9062), 0.00899547 s/step
+Meep progress: 28.98046875/177.5 = 16.3% done in 44.2s, 226.7s to go
+on time step 7420 (time=28.9844), 0.210396 s/step
+Meep progress: 29.21484375/177.5 = 16.5% done in 48.3s, 245.4s to go
+on time step 7480 (time=29.2188), 0.0683995 s/step
+Meep progress: 29.2890625/177.5 = 16.5% done in 52.4s, 264.9s to go
+on time step 7499 (time=29.293), 0.211204 s/step
+Meep progress: 32.16796875/177.5 = 18.1% done in 56.4s, 254.6s to go
+on time step 8285 (time=32.3633), 0.00509316 s/step
+Meep progress: 35.9296875/177.5 = 20.2% done in 60.4s, 237.8s to go
+on time step 9248 (time=36.125), 0.0041542 s/step
+Meep progress: 39.6953125/177.5 = 22.4% done in 64.4s, 223.4s to go
+on time step 10211 (time=39.8867), 0.0041544 s/step
+Meep progress: 43.0390625/177.5 = 24.2% done in 68.4s, 213.6s to go
+on time step 11062 (time=43.2109), 0.00470225 s/step
+Meep progress: 46.37109375/177.5 = 26.1% done in 72.4s, 204.6s to go
+on time step 11915 (time=46.543), 0.00469345 s/step
+Meep progress: 49.703125/177.5 = 28.0% done in 76.4s, 196.4s to go
+on time step 12768 (time=49.875), 0.0046937 s/step
+Meep progress: 53.03125/177.5 = 29.9% done in 80.4s, 188.6s to go
+on time step 13620 (time=53.2031), 0.00469609 s/step
+Meep progress: 56.36328125/177.5 = 31.8% done in 84.4s, 181.3s to go
+on time step 14472 (time=56.5312), 0.00469894 s/step
+Meep progress: 59.67578125/177.5 = 33.6% done in 88.4s, 174.5s to go
+on time step 15321 (time=59.8477), 0.00471439 s/step
+Meep progress: 63.0078125/177.5 = 35.5% done in 92.4s, 167.9s to go
+on time step 16174 (time=63.1797), 0.00469092 s/step
+Meep progress: 66.3203125/177.5 = 37.4% done in 96.4s, 161.6s to go
+on time step 17022 (time=66.4922), 0.00471768 s/step
+Meep progress: 69.65234375/177.5 = 39.2% done in 100.4s, 155.4s to go
+on time step 17875 (time=69.8242), 0.00469135 s/step
+Meep progress: 72.9765625/177.5 = 41.1% done in 104.4s, 149.5s to go
+on time step 18726 (time=73.1484), 0.00470419 s/step
+Meep progress: 76.30078125/177.5 = 43.0% done in 108.4s, 143.8s to go
+on time step 19578 (time=76.4766), 0.00470033 s/step
+Meep progress: 79.62890625/177.5 = 44.9% done in 112.4s, 138.1s to go
+on time step 20430 (time=79.8047), 0.00469811 s/step
+Meep progress: 82.96484375/177.5 = 46.7% done in 116.4s, 132.6s to go
+on time step 21284 (time=83.1406), 0.00468741 s/step
+Meep progress: 86.3046875/177.5 = 48.6% done in 120.4s, 127.2s to go
+on time step 22139 (time=86.4805), 0.00468112 s/step
+Meep progress: 89.640625/177.5 = 50.5% done in 124.4s, 121.9s to go
+on time step 22993 (time=89.8164), 0.00468589 s/step
+Meep progress: 92.97265625/177.5 = 52.4% done in 128.4s, 116.7s to go
+on time step 23846 (time=93.1484), 0.00469461 s/step
+Meep progress: 96.30078125/177.5 = 54.3% done in 132.4s, 111.6s to go
+on time step 24698 (time=96.4766), 0.00469651 s/step
+Meep progress: 99.6328125/177.5 = 56.1% done in 136.4s, 106.6s to go
+on time step 25551 (time=99.8086), 0.00469301 s/step
+Meep progress: 102.96875/177.5 = 58.0% done in 140.4s, 101.6s to go
+on time step 26405 (time=103.145), 0.00468626 s/step
+Meep progress: 106.30859375/177.5 = 59.9% done in 144.4s, 96.7s to go
+on time step 27260 (time=106.484), 0.00468005 s/step
+Meep progress: 109.64453125/177.5 = 61.8% done in 148.4s, 91.8s to go
+on time step 28114 (time=109.82), 0.00468875 s/step
+Meep progress: 112.984375/177.5 = 63.7% done in 152.4s, 87.0s to go
+on time step 28969 (time=113.16), 0.00468113 s/step
+Meep progress: 116.30859375/177.5 = 65.5% done in 156.4s, 82.3s to go
+on time step 29818 (time=116.477), 0.00471159 s/step
+Meep progress: 119.640625/177.5 = 67.4% done in 160.4s, 77.6s to go
+on time step 30672 (time=119.812), 0.00468416 s/step
+Meep progress: 122.98046875/177.5 = 69.3% done in 164.4s, 72.9s to go
+on time step 31527 (time=123.152), 0.00468277 s/step
+Meep progress: 126.3125/177.5 = 71.2% done in 168.4s, 68.3s to go
+on time step 32380 (time=126.484), 0.00469167 s/step
+Meep progress: 129.6484375/177.5 = 73.0% done in 172.4s, 63.6s to go
+on time step 33234 (time=129.82), 0.0046845 s/step
+Meep progress: 132.1328125/177.5 = 74.4% done in 176.5s, 60.6s to go
+on time step 33827 (time=132.137), 0.00689188 s/step
+Meep progress: 132.2109375/177.5 = 74.5% done in 180.7s, 61.9s to go
+on time step 33847 (time=132.215), 0.209298 s/step
+Meep progress: 134.98046875/177.5 = 76.0% done in 184.7s, 58.2s to go
+on time step 34600 (time=135.156), 0.00531339 s/step
+Meep progress: 138.3125/177.5 = 77.9% done in 188.7s, 53.5s to go
+on time step 35453 (time=138.488), 0.00469462 s/step
+Meep progress: 141.6484375/177.5 = 79.8% done in 192.7s, 48.8s to go
+on time step 36307 (time=141.824), 0.00468461 s/step
+Meep progress: 144.98046875/177.5 = 81.7% done in 196.7s, 44.1s to go
+on time step 37160 (time=145.156), 0.00469188 s/step
+Meep progress: 148.3125/177.5 = 83.6% done in 200.7s, 39.5s to go
+on time step 38013 (time=148.488), 0.00469066 s/step
+Meep progress: 151.6484375/177.5 = 85.4% done in 204.7s, 34.9s to go
+on time step 38867 (time=151.824), 0.00468914 s/step
+Meep progress: 154.96875/177.5 = 87.3% done in 208.7s, 30.3s to go
+on time step 39717 (time=155.145), 0.00470651 s/step
+Meep progress: 158.3046875/177.5 = 89.2% done in 212.7s, 25.8s to go
+on time step 40571 (time=158.48), 0.00468638 s/step
+Meep progress: 161.640625/177.5 = 91.1% done in 216.7s, 21.3s to go
+on time step 41424 (time=161.812), 0.00469372 s/step
+Meep progress: 163.3359375/177.5 = 92.0% done in 220.7s, 19.1s to go
+on time step 41815 (time=163.34), 0.0103075 s/step
+Meep progress: 166.5859375/177.5 = 93.9% done in 224.7s, 14.7s to go
+on time step 42698 (time=166.789), 0.00453266 s/step
+Meep progress: 167.55859375/177.5 = 94.4% done in 228.9s, 13.6s to go
+on time step 42896 (time=167.562), 0.0208107 s/step
+Meep progress: 167.63671875/177.5 = 94.4% done in 233.1s, 13.7s to go
+on time step 42916 (time=167.641), 0.210398 s/step
+Meep progress: 167.71484375/177.5 = 94.5% done in 237.3s, 13.8s to go
+on time step 42936 (time=167.719), 0.210298 s/step
+Meep progress: 167.7890625/177.5 = 94.5% done in 241.3s, 14.0s to go
+on time step 42955 (time=167.793), 0.210576 s/step
+Meep progress: 167.8671875/177.5 = 94.6% done in 245.5s, 14.1s to go
+on time step 42975 (time=167.871), 0.209695 s/step
+Meep progress: 167.9453125/177.5 = 94.6% done in 249.7s, 14.2s to go
+on time step 42995 (time=167.949), 0.210398 s/step
+Meep progress: 168.0234375/177.5 = 94.7% done in 253.9s, 14.3s to go
+on time step 43015 (time=168.027), 0.209547 s/step
+Meep progress: 168.1015625/177.5 = 94.7% done in 258.1s, 14.4s to go
+on time step 43035 (time=168.105), 0.209947 s/step
+Meep progress: 168.1796875/177.5 = 94.7% done in 262.3s, 14.5s to go
+on time step 43055 (time=168.184), 0.209298 s/step
+Meep progress: 168.25390625/177.5 = 94.8% done in 266.3s, 14.6s to go
+on time step 43074 (time=168.258), 0.210733 s/step
+Meep progress: 168.33203125/177.5 = 94.8% done in 270.5s, 14.7s to go
+on time step 43094 (time=168.336), 0.209748 s/step
+Meep progress: 168.41015625/177.5 = 94.9% done in 274.7s, 14.8s to go
+on time step 43114 (time=168.414), 0.209497 s/step
+Meep progress: 168.48828125/177.5 = 94.9% done in 278.9s, 14.9s to go
+on time step 43134 (time=168.492), 0.209497 s/step
+Meep progress: 168.56640625/177.5 = 95.0% done in 283.0s, 15.0s to go
+on time step 43154 (time=168.57), 0.209747 s/step
+Meep progress: 168.64453125/177.5 = 95.0% done in 287.2s, 15.1s to go
+on time step 43174 (time=168.648), 0.209747 s/step
+Meep progress: 168.72265625/177.5 = 95.1% done in 291.4s, 15.2s to go
+on time step 43194 (time=168.727), 0.209748 s/step
+Meep progress: 168.80078125/177.5 = 95.1% done in 295.6s, 15.2s to go
+on time step 43214 (time=168.805), 0.210197 s/step
+Meep progress: 168.87890625/177.5 = 95.1% done in 299.8s, 15.3s to go
+on time step 43234 (time=168.883), 0.210197 s/step
+Meep progress: 168.95703125/177.5 = 95.2% done in 304.0s, 15.4s to go
+on time step 43254 (time=168.961), 0.209697 s/step
+Meep progress: 169.03125/177.5 = 95.2% done in 308.0s, 15.4s to go
+on time step 43273 (time=169.035), 0.211155 s/step
+Meep progress: 169.109375/177.5 = 95.3% done in 312.2s, 15.5s to go
+on time step 43293 (time=169.113), 0.209597 s/step
+Meep progress: 171.5703125/177.5 = 96.7% done in 316.2s, 10.9s to go
+on time step 43966 (time=171.742), 0.00594589 s/step
+Meep progress: 174.8984375/177.5 = 98.5% done in 320.2s, 4.8s to go
+on time step 44818 (time=175.07), 0.00469968 s/step
+run 0 finished at t = 177.5 (45440 timesteps)
+MPB solved for omega_1(2.2349,0,0) = 0.681423 after 29 iters
+MPB solved for omega_1(2.10554,0,0) = 0.645188 after 10 iters
+MPB solved for omega_1(2.10545,0,0) = 0.645161 after 3 iters
+MPB solved for omega_1(2.10545,0,0) = 0.645161 after 1 iters
+Dominant planewave for band 1: (2.105446,-0.000000,0.000000)
+MPB solved for omega_2(2.2349,0,0) = 0.700706 after 23 iters
+MPB solved for omega_2(2.02814,0,0) = 0.645469 after 13 iters
+MPB solved for omega_2(2.02698,0,0) = 0.645161 after 7 iters
+MPB solved for omega_2(2.02698,0,0) = 0.645161 after 1 iters
+Dominant planewave for band 2: (2.026975,-0.000000,0.000000)
+MPB solved for omega_3(2.2349,0,0) = 0.784924 after 24 iters
+MPB solved for omega_3(1.69348,0,0) = 0.646837 after 13 iters
+MPB solved for omega_3(1.68683,0,0) = 0.645162 after 9 iters
+MPB solved for omega_3(1.68683,0,0) = 0.645161 after 1 iters
+Dominant planewave for band 3: (1.686826,-1.000000,0.000000)
+EigCoeffsResult(alpha=array([[[-6.78567714+3.7515761j , -0.09172296+0.20857199j]],
+
+       [[-0.06942696-0.04420878j, -0.010377  +0.09127886j]],
+
+       [[ 0.02241421+0.07871334j,  0.08584366-0.05498975j]]]), vgrp=array([0.27989087, 0.26553645, 0.25182833]), kpoints=[Vector3<2.105445659860747, 0.0, 0.0>, Vector3<2.0269753188495163, 0.0, 0.0>, Vector3<1.6868256573124254, 0.0, 0.0>], kdom=[Vector3<2.105445659860747, -0.0, 0.0>, Vector3<2.0269753188495163, -0.0, 0.0>, Vector3<1.6868256573124252, -1.0, 0.0>])
+MPB solved for omega_1(0,1.703,0) = 0.590563 after 19 iters
+MPB solved for omega_1(0,1.89794,0) = 0.645035 after 10 iters
+MPB solved for omega_1(0,1.89839,0) = 0.645161 after 5 iters
+MPB solved for omega_1(0,1.89839,0) = 0.645161 after 1 iters
+Dominant planewave for band 1: (0.000000,1.898393,0.000000)
+MPB solved for omega_2(0,1.703,0) = 0.667473 after 18 iters
+MPB solved for omega_2(0,1.61518,0) = 0.64512 after 12 iters
+MPB solved for omega_2(0,1.61534,0) = 0.645161 after 5 iters
+MPB solved for omega_2(0,1.61534,0) = 0.645161 after 1 iters
+Dominant planewave for band 2: (0.000000,1.615340,0.000000)
+MPB solved for omega_3(0,1.703,0) = 0.868024 after 20 iters
+MPB solved for omega_3(0,0.835987,0) = 0.573801 after 132 iters
+MPB solved for omega_3(0,0.950671,0) = 0.64553 after 21 iters
+MPB solved for omega_3(0,0.95008,0) = 0.645161 after 11 iters
+MPB solved for omega_3(0,0.95008,0) = 0.645161 after 1 iters
+Dominant planewave for band 3: (0.000000,0.950080,0.000000)
+EigCoeffsResult(alpha=array([[[ 0.37282504+0.01453484j, -5.44362005+0.77261277j]],
+
+       [[-0.81230972+1.25993868j,  2.40337546-4.21975873j]],
+
+       [[-1.50530522-0.0278622j ,  4.34766247-0.01481989j]]]), vgrp=array([0.27888091, 0.25508107, 0.62441787]), kpoints=[Vector3<0.0, 1.898393325714857, 0.0>, Vector3<0.0, 1.615340145271615, 0.0>, Vector3<0.0, 0.9500803275512518, 0.0>], kdom=[Vector3<0.0, 1.8983933257148569, 0.0>, Vector3<0.0, 1.615340145271615, 0.0>, Vector3<0.0, 0.9500803275512518, 0.0>])
+
+Elapsed run time = 328.6594 s
