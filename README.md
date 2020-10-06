@@ -45,3 +45,23 @@ Execute a cell by pressing `shift+enter`. The output will be displayed right und
 
 More on Jupyter Notebooks : https://www.dataquest.io/blog/jupyter-notebook-tutorial/
 
+## Manually making an environment visible
+
+Jupyter should auto-detect the environments, but if for some reason it does not you can manually add them. 
+
+Go to the shell (see "Checkout environment") and type
+
+```
+conda info --envs
+```
+to list the environments. Activate the environment you want to add by typing
+```
+conda activate environment_name
+```
+Then link the environment "environment_name" to your Jupyter kernel with label "my_environment_name" by running
+```
+python -m ipykernel install --user --name=my_environment_name
+```
+You should get the following response :
+![add_env](images/manual_add_env.PNG)
+Restart the Jupyter for Classes server and you should see the environment under the name you assigned.
