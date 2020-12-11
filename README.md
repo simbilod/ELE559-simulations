@@ -65,3 +65,26 @@ python -m ipykernel install --user --name=my_environment_name
 You should get the following response :
 ![add_env](images/manual_add_env.PNG)
 Restart the Jupyter for Classes server and you should see the environment under the name you assigned.
+
+## Accessing KLayout GUI from the myAdroit Desktop 
+
+To see the GDS files you have designed on the server itself, you can use the preinstalled KLayout on the Desktop app.
+
+First, (optionally) create an alias to open KLayout in your .bashrc. In the shell (see "Checkout environment") type
+
+```
+cd
+nano .bashrc
+```
+and add the lines
+```
+# KLayout location
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sb30/Public/klayout-0.26.8/bin-release
+alias klayout="/home/sb30/Public/klayout-0.26.8/bin-release/klayout"
+```
+Then, open the desktop app like you would a Jupyter for Classes session. Open a terminal and type
+```klayout```
+(or full link from the alias) to open the program.
+
+![desktop_klayout](images/desktop_klayout.png)
