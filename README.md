@@ -93,8 +93,6 @@ Then, open the desktop app like you would a Jupyter for Classes session. Open a 
 
 In the long term, this will consist of mostly Python-based workflow and utilities to connect open-source photonic circuit layout and simulation software :
 
-[link to Google!](http://google.com)
-
 * [zeropdk](https://github.com/lightwave-lab/zeropdk) for GDSII layout
 * Meshing of the GDSII via [libGDSII](https://github.com/HomerReid/libGDSII)
 * [DEVSIM](https://github.com/devsim/devsim) for semiconductor simulations
