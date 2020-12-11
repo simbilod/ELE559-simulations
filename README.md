@@ -80,8 +80,8 @@ and add the lines
 ```
 # KLayout location
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sb30/Public/klayout-0.26.8/bin-release
-alias klayout="/home/sb30/Public/klayout-0.26.8/bin-release/klayout"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ELE559/klayout-0.26.8/bin-release
+alias klayout="/home/ELE559/klayout-0.26.8/bin-release/klayout"
 ```
 Then, open the desktop app like you would a Jupyter for Classes session. Open a terminal and type
 ```klayout```
