@@ -96,10 +96,10 @@ In the long term, this will consist of mostly Python-based workflow and utilitie
 * [zeropdk](https://github.com/lightwave-lab/zeropdk) for GDSII layout
 * Meshing of the GDSII via [libGDSII](https://github.com/HomerReid/libGDSII)
 * [DEVSIM](https://github.com/devsim/devsim) for semiconductor simulations
-** Potentially [Charon](https://charon.sandia.gov/) for MPI compatibility if the interface can be worked out 
-** Electrical ports from zeropdk as boundary conditions
+	* Potentially [Charon](https://charon.sandia.gov/) for MPI compatibility if the interface can be worked out 
+	* Electrical ports from zeropdk as boundary conditions
 * [MEEP](https://github.com/NanoComp/meep) for electromagnetic simulations
-** Already MPI-compatible
-** Optical ports of zeropdk as sources and monitors
-** Optionally index distribution from semiconductor simulation
+	* Already MPI-compatible
+	* Optical ports of zeropdk as sources and monitors
+	* Optionally index distribution from semiconductor simulation
 * S-parameter extraction from the simulations above to generate compact models for use with large-scale circuit simulations such as [Simphony](https://github.com/simphony) or [PhotonTorch](https://github.com/flaport/photontorch)
