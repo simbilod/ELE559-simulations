@@ -92,7 +92,7 @@ class EBeamLayersMixin(PCell):
             "Lumerical", TypeLayer, "Lumerical (733/0)", default=TECHLAYERS["Lumerical"]
         ),
         define_param(
-            "sim_crossSection", TypeLayer, "Simulation cross section (1000/0)", default=TECHLAYERS["sim_crossSection"]
+            "sim_crossSection", TypeLayer, "Simulation cross section (1000/0)", default=TECHLAYERS["sim_crossSection"], layertype='sim', zmin=-0.75, zmax=1
         ),
     )
 

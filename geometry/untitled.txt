@@ -1,0 +1,8 @@
+Include "demo_output.geo";
+
+h = 0.22
+
+Extrude {0,0,h} {
+  Surface{1}; Layers{ {1,2}, {0.5,1} };
+}
+
