@@ -1,3 +1,5 @@
+*.csv
+slurm-*
 *.h5
 *.npy
 
