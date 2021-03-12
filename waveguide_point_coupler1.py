@@ -283,8 +283,7 @@ def main(args):
     plt.figure(dpi=res)
     plt.imshow(eps_data.transpose(), interpolation='none', cmap='binary', origin='lower')
     plt.colorbar()
-    plt.title(f"gap={gap:.2f}um")
-    plt.savefig(f"media/coupler1.gap{gap:.2f}um.debug.png")
+    plt.show()
 
 
     # ### Verify that the structure makes sense.
@@ -305,8 +304,7 @@ def main(args):
 
     f = plt.figure(dpi=100)
     sim.plot2D(ax=f.gca())
-    plt.title(f"gap={gap:.2f}um")
-    plt.savefig(f"media/coupler1.gap{gap:.2f}um.png")
+    plt.show()
 
 
     # Looks pretty good. Simulations at the high enough resolution required to avoid spurious reflections in the bend are very slow! This can be sped up quite a bit by running the code in parallel from the terminal. Later, we will put this notebook's code into a script and run it in parallel.
@@ -320,7 +318,7 @@ def main(args):
 
     # Set to true to compute animation (may take a lot of memory)
     # Turn this off if you don't need to visualize.
-    compute_animation = True
+    compute_animation = False
 
 
     # In[11]:
@@ -337,7 +335,7 @@ def main(args):
         animate = mp.Animate2D(sim,mp.Ez,f=f,normalize=True)
         sim.run(mp.at_every(1,animate), until_after_sources=stop_condition)
         plt.close()
-        animate.to_mp4(10, f'media/coupler1.gap{gap:.2f}um.mp4')
+        animate.to_mp4(10, 'media/coupler1.mp4')
     else:
         sim.run(until_after_sources=stop_condition)
 
@@ -350,9 +348,9 @@ def main(args):
     # In[12]:
 
 
-#     from IPython.display import Video, display
-#     if compute_animation:
-#         display(Video('media/coupler1.mp4'))
+    from IPython.display import Video, display
+    if compute_animation:
+        display(Video('media/coupler1.mp4'))
 
     # ## Step 5. Compute S parameters of the coupler
 
@@ -423,81 +421,6 @@ def main(args):
     print(f"Parameters: radius={ring_radius:.1f}")
     print(f"Frequencies: {mode1_freqs}")
 
-    S11_mag = np.abs(S11)
-    S11_phase = np.unwrap(np.angle(S11))
-
-    S21_mag = np.abs(S21)
-    S21_phase = np.unwrap(np.angle(S21))
-
-    S31_mag = np.abs(S31)
-    S31_phase = np.unwrap(np.angle(S31))
-
-    S41_mag = np.abs(S41)
-    S41_phase = np.unwrap(np.angle(S41))
-
-    # Plot S21
-    f, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(5, 8))
-    ax1.plot(1/mode1_freqs, 10 * np.log10(S31_mag), '.-')
-    ax1.set_title("S31")
-    ax1.set_xlabel(r"$\lambda$ (um)")
-    ax1.set_ylabel("Magnitude (dB)")
-    ax1.set_ylim(None, 0)
-    ax1.grid()
-
-    ax2.plot(1/mode1_freqs, S31_phase, '.-')
-    ax2.set_xlabel(r"$\lambda$ (um)")
-    ax2.set_ylabel("Phase (rad)")
-    ax2.grid()
-    plt.tight_layout()
-    plt.savefig(f"media/coupler1.gap{gap:.2f}um.S31.png")
-
-    # Plot S41
-    f, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(5, 8))
-    ax1.plot(1/mode1_freqs, 10 * np.log10(S41_mag), '.-')
-    ax1.set_title("S41")
-    ax1.set_xlabel(r"$\lambda$ (um)")
-    ax1.set_ylabel("Magnitude (dB)")
-    ax1.set_ylim(None, 0)
-    ax1.grid()
-
-    ax2.plot(1/mode1_freqs, S41_phase, '.-')
-    ax2.set_xlabel(r"$\lambda$ (um)")
-    ax2.set_ylabel("Phase (rad)")
-    ax2.grid()
-    plt.tight_layout()
-    plt.savefig(f"media/coupler1.gap{gap:.2f}um.S41.png")
-
-    # Plot S11
-    f, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(5, 8))
-    ax1.plot(1/mode1_freqs, 10 * np.log10(S11_mag), '.-')
-    ax1.set_title("S11")
-    ax1.set_xlabel(r"$\lambda$ (um)")
-    ax1.set_ylabel("Magnitude (dB)")
-    ax1.set_ylim(None, 0)
-    ax1.grid()
-
-    ax2.plot(1/mode1_freqs, S11_phase, '.-')
-    ax2.set_xlabel(r"$\lambda$ (um)")
-    ax2.set_ylabel("Phase (rad)")
-    ax2.grid()
-    plt.tight_layout()
-    plt.savefig(f"media/coupler1.gap{gap:.2f}um.S11.png")
-
-    # Plot S21
-    f, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(5, 8))
-    ax1.plot(1/mode1_freqs, 10 * np.log10(S21_mag), '.-')
-    ax1.set_title("S21")
-    ax1.set_xlabel(r"$\lambda$ (um)")
-    ax1.set_ylabel("Magnitude (dB)")
-    ax1.set_ylim(None, 0)
-    ax1.grid()
-
-    ax2.plot(1/mode1_freqs, S21_phase, '.-')
-    ax2.set_xlabel(r"$\lambda$ (um)")
-    ax2.set_ylabel("Phase (rad)")
-    ax2.grid()
-    plt.tight_layout()
-    plt.savefig(f"media/coupler1.gap{gap:.2f}um.S21.png")
 
     # In[20]:
 
@@ -555,10 +478,9 @@ if __name__ == '__main__':
     import os
     if "SLURM_ARRAY_TASK_ID" in os.environ:
         idx = int(os.environ["SLURM_ARRAY_TASK_ID"])
-        parameters = [0.15, 0.2, 0.25, 0.3]
+        parameters = [0.15, 0.25, 0.3]
         args.gap = parameters[idx]
     
     print("Chosen parameters:", args)
     main(args)
-
 
