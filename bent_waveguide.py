@@ -213,9 +213,11 @@ def main(args):
     # It has to do with some numerical errors between python and meep.
     # Ignore.
 
-    # f = plt.figure(dpi=100)
-    # sim.plot2D(ax=f.gca())
+    f = plt.figure(dpi=100)
+    sim.plot2D(ax=f.gca())
+    plt.title(f"r={ring_radius:.1f}um")
     # plt.show()
+    plt.savefig(f"media/bend.r{ring_radius:.1f}um.png")
 
 
     # Looks pretty good. Simulations at the high enough resolution required to avoid spurious reflections in the bend are very slow! This can be sped up quite a bit by running the code in parallel from the terminal. Later, we will put this notebook's code into a script and run it in parallel.
@@ -228,7 +230,7 @@ def main(args):
 
 
     # Set to true to compute animation (may take a lot of memory)
-    compute_animation = False
+    compute_animation = True
 
 
     # In[9]:
@@ -246,7 +248,7 @@ def main(args):
         sim.run(mp.at_every(1,animate), until_after_sources=stop_condition)
         plt.close()
         # Save video as mp4
-        animate.to_mp4(10, 'media/bend.mp4')
+        animate.to_mp4(10, f'media/bend.r{ring_radius:.1f}um.mp4')
     else:
         sim.run(until_after_sources=stop_condition)
 
@@ -317,38 +319,39 @@ def main(args):
 
 
 #     # Plot S21
-#     f, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(5, 8))
-#     ax1.plot(1/mode1_freqs, 10 * np.log10(S21_mag), '.-')
-#     ax1.set_title("S21")
-#     ax1.set_xlabel(r"$\lambda$ (um)")
-#     ax1.set_ylabel("Magnitude (dB)")
-#     ax1.set_ylim(None, 0)
-#     ax1.grid()
+    f, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(5, 8))
+    ax1.plot(1/mode1_freqs, 10 * np.log10(S21_mag), '.-')
+    ax1.set_title("S21")
+    ax1.set_xlabel(r"$\lambda$ (um)")
+    ax1.set_ylabel("Magnitude (dB)")
+    ax1.set_ylim(None, 0)
+    ax1.grid()
 
-#     ax2.plot(1/mode1_freqs, S21_phase, '.-')
-#     ax2.set_xlabel(r"$\lambda$ (um)")
-#     ax2.set_ylabel("Phase (rad)")
-#     ax2.grid()
-#     plt.tight_layout()
-
+    ax2.plot(1/mode1_freqs, S21_phase, '.-')
+    ax2.set_xlabel(r"$\lambda$ (um)")
+    ax2.set_ylabel("Phase (rad)")
+    ax2.grid()
+    plt.tight_layout()
+    plt.savefig(f"media/bend.r{ring_radius:.1f}um.S21.png")
 
 #     # In[14]:
 
 
 #     # Plot S11
-#     f, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(5, 8))
-#     ax1.plot(1/mode1_freqs, 10 * np.log10(S11_mag), '.-')
-#     ax1.set_title("S11")
-#     ax1.set_xlabel(r"$\lambda$ (um)")
-#     ax1.set_ylabel("Magnitude (dB)")
-#     ax1.set_ylim(None, 0)
-#     ax1.grid()
+    f, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(5, 8))
+    ax1.plot(1/mode1_freqs, 10 * np.log10(S11_mag), '.-')
+    ax1.set_title("S11")
+    ax1.set_xlabel(r"$\lambda$ (um)")
+    ax1.set_ylabel("Magnitude (dB)")
+    ax1.set_ylim(None, 0)
+    ax1.grid()
 
-#     ax2.plot(1/mode1_freqs, S11_phase, '.-')
-#     ax2.set_xlabel(r"$\lambda$ (um)")
-#     ax2.set_ylabel("Phase (rad)")
-#     ax2.grid()
-#     plt.tight_layout()
+    ax2.plot(1/mode1_freqs, S11_phase, '.-')
+    ax2.set_xlabel(r"$\lambda$ (um)")
+    ax2.set_ylabel("Phase (rad)")
+    ax2.grid()
+    plt.tight_layout()
+    plt.savefig(f"media/bend.r{ring_radius:.1f}um.S11.png")
 
 
     # # Milestones
@@ -390,7 +393,8 @@ if __name__ == '__main__':
     import os
     if "SLURM_ARRAY_TASK_ID" in os.environ:
         idx = int(os.environ["SLURM_ARRAY_TASK_ID"])
-        parameters = [7.0, 7.5, 8.0]
+        parameters = [7.0, 7.5, 8.0, 8.5]
+        parameters = [1.5 + 0.5 * i for i in range(15)]
         args.radius = parameters[idx]
     
     print("Chosen parameters:", args)

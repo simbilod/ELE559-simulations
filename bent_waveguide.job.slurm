@@ -7,9 +7,9 @@
 #SBATCH --cpus-per-task=4        # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
 #SBATCH --time=00:10:00          # total run time limit (HH:MM:SS)
-#SBATCH --array=0-2              # job array with index values 0, 1, 2
+#SBATCH --array=0-14              # job array with index values 0, 1, 2
 #SBATCH --mail-type=all          # send email on job start, end and fault
-#SBATCH --mail-user=<your-net-id>@princeton.edu
+#SBATCH --mail-user=tlima@princeton.edu
 
 # Read more about slurm at https://researchcomputing.princeton.edu/slurm
 

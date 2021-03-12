@@ -129,11 +129,11 @@ def main(args):
 
 
     # Source at port 1
-    layout_path(TOP, MEEP_SOURCE, [coupling_point - port_size/2*ex + (add_drop_length / 2 + src_port_gap) * e135, 
-                                   coupling_point + port_size/2*ex + (add_drop_length / 2 + src_port_gap) * e135], 0)
+#     layout_path(TOP, MEEP_SOURCE, [coupling_point - port_size/2*ex + (add_drop_length / 2 + src_port_gap) * e135, 
+#                                    coupling_point + port_size/2*ex + (add_drop_length / 2 + src_port_gap) * e135], 0)
 
     # Source at port 2 (alternative)
-    # layout_path(TOP, MEEP_SOURCE, [-port_size/2*ey - src_port_gap*ex, port_size/2*ey - 0.2*ex], 0)
+    layout_path(TOP, MEEP_SOURCE, [-port_size/2*ey - src_port_gap*ex, port_size/2*ey - 0.2*ex], 0)
 
     # Port 1
     layout_path(TOP, MEEP_PORT1,   [coupling_point - port_size/2*ex + (add_drop_length / 2) * e135, 
@@ -224,7 +224,7 @@ def main(args):
                                   size=round_vector(src_vol.size),
                                   center=round_vector(src_vol.center),
                                   direction=mp.NO_DIRECTION,
-                                  eig_kpoint=mp.Vector3(1, -1, 0), # -45 degree angle
+                                  eig_kpoint=mp.Vector3(1, 0, 0), # 0 degree angle
                                   eig_band=1,
                                   eig_parity=mp.NO_PARITY,
                                   eig_match_freq=True)]
@@ -284,7 +284,7 @@ def main(args):
     plt.imshow(eps_data.transpose(), interpolation='none', cmap='binary', origin='lower')
     plt.colorbar()
     plt.title(f"gap={gap:.2f}um")
-    plt.savefig(f"media/coupler1.gap{gap:.2f}um.debug.png")
+    plt.savefig(f"media/coupler2.gap{gap:.2f}um.debug.png")
 
 
     # ### Verify that the structure makes sense.
@@ -306,7 +306,7 @@ def main(args):
     f = plt.figure(dpi=100)
     sim.plot2D(ax=f.gca())
     plt.title(f"gap={gap:.2f}um")
-    plt.savefig(f"media/coupler1.gap{gap:.2f}um.png")
+    plt.savefig(f"media/coupler2.gap{gap:.2f}um.png")
 
 
     # Looks pretty good. Simulations at the high enough resolution required to avoid spurious reflections in the bend are very slow! This can be sped up quite a bit by running the code in parallel from the terminal. Later, we will put this notebook's code into a script and run it in parallel.
@@ -337,7 +337,7 @@ def main(args):
         animate = mp.Animate2D(sim,mp.Ez,f=f,normalize=True)
         sim.run(mp.at_every(1,animate), until_after_sources=stop_condition)
         plt.close()
-        animate.to_mp4(10, f'media/coupler1.gap{gap:.2f}um.mp4')
+        animate.to_mp4(10, f'media/coupler2.gap{gap:.2f}um.mp4')
     else:
         sim.run(until_after_sources=stop_condition)
 
@@ -418,106 +418,113 @@ def main(args):
     S31 = p3_thru_coeff/p1_thru_coeff
     S21 = p2_thru_coeff/p1_thru_coeff
     S11 = p1_reflected_coeff/p1_thru_coeff
+    
+    # transmittance
+    S42 = p4_thru_coeff/p2_reflected_coeff
+    S32 = p3_thru_coeff/p2_reflected_coeff
+    S22 = p2_thru_coeff/p2_reflected_coeff
+    S12 = p1_reflected_coeff/p2_reflected_coeff
 
     print("----------------------------------")
     print(f"Parameters: radius={ring_radius:.1f}")
     print(f"Frequencies: {mode1_freqs}")
+    
+    S12_mag = np.abs(S12)
+    S12_phase = np.unwrap(np.angle(S12))
 
-    S11_mag = np.abs(S11)
-    S11_phase = np.unwrap(np.angle(S11))
+    S22_mag = np.abs(S22)
+    S22_phase = np.unwrap(np.angle(S22))
 
-    S21_mag = np.abs(S21)
-    S21_phase = np.unwrap(np.angle(S21))
+    S32_mag = np.abs(S32)
+    S32_phase = np.unwrap(np.angle(S32))
 
-    S31_mag = np.abs(S31)
-    S31_phase = np.unwrap(np.angle(S31))
+    S42_mag = np.abs(S42)
+    S42_phase = np.unwrap(np.angle(S42))
 
-    S41_mag = np.abs(S41)
-    S41_phase = np.unwrap(np.angle(S41))
-
-    # Plot S21
+    # Plot S42
     f, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(5, 8))
-    ax1.plot(1/mode1_freqs, 10 * np.log10(S31_mag), '.-')
-    ax1.set_title("S31")
+    ax1.plot(1/mode1_freqs, 10 * np.log10(S42_mag), '.-')
+    ax1.set_title("S42")
     ax1.set_xlabel(r"$\lambda$ (um)")
     ax1.set_ylabel("Magnitude (dB)")
     ax1.set_ylim(None, 0)
     ax1.grid()
 
-    ax2.plot(1/mode1_freqs, S31_phase, '.-')
+    ax2.plot(1/mode1_freqs, S42_phase, '.-')
     ax2.set_xlabel(r"$\lambda$ (um)")
     ax2.set_ylabel("Phase (rad)")
     ax2.grid()
     plt.tight_layout()
-    plt.savefig(f"media/coupler1.gap{gap:.2f}um.S31.png")
+    plt.savefig(f"media/coupler2.gap{gap:.2f}um.S42.png")
 
-    # Plot S41
+    # Plot S32
     f, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(5, 8))
-    ax1.plot(1/mode1_freqs, 10 * np.log10(S41_mag), '.-')
-    ax1.set_title("S41")
+    ax1.plot(1/mode1_freqs, 10 * np.log10(S32_mag), '.-')
+    ax1.set_title("S32")
     ax1.set_xlabel(r"$\lambda$ (um)")
     ax1.set_ylabel("Magnitude (dB)")
     ax1.set_ylim(None, 0)
     ax1.grid()
 
-    ax2.plot(1/mode1_freqs, S41_phase, '.-')
+    ax2.plot(1/mode1_freqs, S32_phase, '.-')
     ax2.set_xlabel(r"$\lambda$ (um)")
     ax2.set_ylabel("Phase (rad)")
     ax2.grid()
     plt.tight_layout()
-    plt.savefig(f"media/coupler1.gap{gap:.2f}um.S41.png")
+    plt.savefig(f"media/coupler2.gap{gap:.2f}um.S32.png")
 
-    # Plot S11
+    # Plot S22
     f, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(5, 8))
-    ax1.plot(1/mode1_freqs, 10 * np.log10(S11_mag), '.-')
-    ax1.set_title("S11")
+    ax1.plot(1/mode1_freqs, 10 * np.log10(S22_mag), '.-')
+    ax1.set_title("S22")
     ax1.set_xlabel(r"$\lambda$ (um)")
     ax1.set_ylabel("Magnitude (dB)")
     ax1.set_ylim(None, 0)
     ax1.grid()
 
-    ax2.plot(1/mode1_freqs, S11_phase, '.-')
+    ax2.plot(1/mode1_freqs, S22_phase, '.-')
     ax2.set_xlabel(r"$\lambda$ (um)")
     ax2.set_ylabel("Phase (rad)")
     ax2.grid()
     plt.tight_layout()
-    plt.savefig(f"media/coupler1.gap{gap:.2f}um.S11.png")
+    plt.savefig(f"media/coupler2.gap{gap:.2f}um.S22.png")
 
-    # Plot S21
+    # Plot S12
     f, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(5, 8))
-    ax1.plot(1/mode1_freqs, 10 * np.log10(S21_mag), '.-')
-    ax1.set_title("S21")
+    ax1.plot(1/mode1_freqs, 10 * np.log10(S12_mag), '.-')
+    ax1.set_title("S12")
     ax1.set_xlabel(r"$\lambda$ (um)")
     ax1.set_ylabel("Magnitude (dB)")
     ax1.set_ylim(None, 0)
     ax1.grid()
 
-    ax2.plot(1/mode1_freqs, S21_phase, '.-')
+    ax2.plot(1/mode1_freqs, S12_phase, '.-')
     ax2.set_xlabel(r"$\lambda$ (um)")
     ax2.set_ylabel("Phase (rad)")
     ax2.grid()
     plt.tight_layout()
-    plt.savefig(f"media/coupler1.gap{gap:.2f}um.S21.png")
+    plt.savefig(f"media/coupler2.gap{gap:.2f}um.S12.png")
+
 
     # In[20]:
 
 
     #Write to csv file
     import csv
-    with open(f'sparams1.gap{gap:.2f}um.csv', mode='w') as sparams_file:
+    with open(f'sparams2.gap{gap:.2f}um.csv', mode='w') as sparams_file:
         sparam_writer = csv.writer(sparams_file, delimiter=',')
         sparam_writer.writerow(['f(Hz)',
-                                'real(S11)','imag(S11)',
-                                'real(S21)','imag(S21)',
-                                'real(S31)','imag(S31)',
-                                'real(S41)','imag(S41)'
+                                'real(S12)','imag(S12)',
+                                'real(S22)','imag(S22)',
+                                'real(S32)','imag(S32)',
+                                'real(S42)','imag(S42)'
                                ])
         for i in range(len(mode1_freqs)):
             sparam_writer.writerow([mode1_freqs[i] * 3e14,
-                                    np.real(S11[i]),np.imag(S11[i]),
-                                    np.real(S21[i]),np.imag(S21[i]),
-                                    np.real(S31[i]),np.imag(S31[i]),
-                                    np.real(S41[i]),np.imag(S41[i])
+                                    np.real(S12[i]),np.imag(S12[i]),
+                                    np.real(S22[i]),np.imag(S22[i]),
+                                    np.real(S32[i]),np.imag(S32[i]),
+                                    np.real(S42[i]),np.imag(S42[i])
                                    ])
 
 
@@ -546,7 +553,7 @@ if __name__ == '__main__':
     # Documentation for argparse: https://docs.python.org/3/library/argparse.html
     
     import argparse
-    parser = argparse.ArgumentParser(description='MEEP simulation for waveguide coupler 1.')
+    parser = argparse.ArgumentParser(description='MEEP simulation for waveguide coupler 2.')
     parser.add_argument('-g', '--gap', type=float, default=0.2,
                         help='coupler gap')
 

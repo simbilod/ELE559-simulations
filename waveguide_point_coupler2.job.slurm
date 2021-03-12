@@ -19,4 +19,5 @@ echo "My SLURM_ARRAY_JOB_ID is $SLURM_ARRAY_JOB_ID."
 echo "My SLURM_ARRAY_TASK_ID is $SLURM_ARRAY_TASK_ID"
 echo "Executing on the machine:" $(hostname)
 
-mpirun -np 4 python waveguide_point_coupler1.py
+mpirun -np 4 python waveguide_point_coupler2.py
+
