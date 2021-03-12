@@ -1,0 +1,391 @@
+My SLURM_ARRAY_JOB_ID is 916905.
+My SLURM_ARRAY_TASK_ID is 0
+Executing on the machine: adroit-12
+Using MPI version 3.1, 4 processes
+Meep version: 1.12.0
+Chosen parameters: Namespace(radius=1.5)
+Produced file /tmp/tmpu14u51ed.gds.
+-----------
+Initializing structure...
+Splitting into 4 chunks evenly
+time for choose_chunkdivision = 0.0370581 s
+Working in 2D dimensions.
+Computational cell is 4.9 x 4.9 x 0 with resolution 100
+     prism, center = (0.948515,-0.551485,0)
+          height 20, axis (0,0,1), 66 vertices:
+          (1.25,-1.5,-10)
+          (1.248,-1.439,-10)
+          (1.244,-1.377,-10)
+          (1.236,-1.317,-10)
+          (1.226,-1.256,-10)
+          (1.213,-1.196,-10)
+          (1.196,-1.137,-10)
+          (1.177,-1.079,-10)
+          (1.155,-1.022,-10)
+          (1.13,-0.966,-10)
+          (1.102,-0.911,-10)
+          (1.072,-0.857,-10)
+          (1.039,-0.806,-10)
+          (1.004,-0.755,-10)
+          (0.966,-0.707,-10)
+          (0.926,-0.661,-10)
+          (0.884,-0.616,-10)
+          (0.839,-0.574,-10)
+          (0.793,-0.534,-10)
+          (0.745,-0.496,-10)
+          (0.694,-0.461,-10)
+          (0.643,-0.428,-10)
+          (0.589,-0.398,-10)
+          (0.534,-0.37,-10)
+          (0.478,-0.345,-10)
+          (0.421,-0.323,-10)
+          (0.363,-0.304,-10)
+          (0.304,-0.287,-10)
+          (0.244,-0.274,-10)
+          (0.183,-0.264,-10)
+          (0.123,-0.256,-10)
+          (0.061,-0.252,-10)
+          (0,-0.25,-10)
+          (0,0.25,-10)
+          (0.086,0.248,-10)
+          (0.172,0.242,-10)
+          (0.257,0.231,-10)
+          (0.341,0.216,-10)
+          (0.425,0.198,-10)
+          (0.508,0.175,-10)
+          (0.59,0.148,-10)
+          (0.67,0.117,-10)
+          (0.748,0.082,-10)
+          (0.825,0.043,-10)
+          (0.9,0.001,-10)
+          (0.972,-0.045,-10)
+          (1.042,-0.094,-10)
+          (1.11,-0.147,-10)
+          (1.175,-0.203,-10)
+          (1.237,-0.263,-10)
+          (1.297,-0.325,-10)
+          (1.353,-0.39,-10)
+          (1.406,-0.458,-10)
+          (1.455,-0.528,-10)
+          (1.501,-0.6,-10)
+          (1.543,-0.675,-10)
+          (1.582,-0.752,-10)
+          (1.617,-0.83,-10)
+          (1.648,-0.91,-10)
+          (1.675,-0.992,-10)
+          (1.698,-1.075,-10)
+          (1.716,-1.159,-10)
+          (1.731,-1.243,-10)
+          (1.742,-1.328,-10)
+          (1.748,-1.414,-10)
+          (1.75,-1.5,-10)
+          dielectric constant epsilon diagonal = (12,12,12)
+     prism, center = (-0.6,0,0)
+          height 20, axis (0,0,1), 4 vertices:
+          (-1.2,-0.25,-10)
+          (-1.2,0.25,-10)
+          (0,0.25,-10)
+          (0,-0.25,-10)
+          dielectric constant epsilon diagonal = (12,12,12)
+     prism, center = (1.5,-2.1,0)
+          height 20, axis (0,0,1), 4 vertices:
+          (1.25,-2.7,-10)
+          (1.25,-1.5,-10)
+          (1.75,-1.5,-10)
+          (1.75,-2.7,-10)
+          dielectric constant epsilon diagonal = (12,12,12)
+time for set_epsilon = 0.240767 s
+-----------
+MPB solved for omega_1(2.2349,0,0) = 0.682374 after 32 iters
+MPB solved for omega_1(2.10209,0,0) = 0.645189 after 9 iters
+MPB solved for omega_1(2.10199,0,0) = 0.645161 after 4 iters
+MPB solved for omega_1(2.10199,0,0) = 0.645161 after 1 iters
+Stop condition: decay to 0.1% of peak value in the last 15.5 time units.
+on time step 2024 (time=10.12), 0.00197684 s/step
+field decay(t = 15.505): 6.13464161449759e-08 / 6.13464161449759e-08 = 1.0
+on time step 4154 (time=20.77), 0.00187809 s/step
+field decay(t = 31.01): 0.02164660762409162 / 0.02164660762409162 = 1.0
+on time step 6281 (time=31.405), 0.00188069 s/step
+on time step 8411 (time=42.055), 0.00187841 s/step
+field decay(t = 46.515): 2.826118657054324 / 2.826118657054324 = 1.0
+on time step 10541 (time=52.705), 0.00187861 s/step
+field decay(t = 62.02): 2.972627113600705 / 2.972627113600705 = 1.0
+on time step 12667 (time=63.335), 0.00188192 s/step
+on time step 14791 (time=73.955), 0.00188354 s/step
+field decay(t = 77.525): 0.11211317003462479 / 2.972627113600705 = 0.037715181134448966
+on time step 16896 (time=84.48), 0.00190052 s/step
+field decay(t = 93.03): 1.5841862842661115e-06 / 2.972627113600705 = 5.329246567852256e-07
+Normalizing field data...
+run 0 finished at t = 93.03 (18606 timesteps)
+Generating MP4...
+MPB solved for omega_1(2.01141,0,0) = 0.618698 after 27 iters
+MPB solved for omega_1(1.87532,0,0) = 0.580676 after 10 iters
+MPB solved for omega_1(1.87521,0,0) = 0.580645 after 4 iters
+MPB solved for omega_1(1.87521,0,0) = 0.580645 after 1 iters
+Dominant planewave for band 1: (1.875210,-0.000000,0.000000)
+MPB solved for omega_1(2.03004,0,0) = 0.623906 after 31 iters
+MPB solved for omega_1(1.89458,0,0) = 0.586052 after 10 iters
+MPB solved for omega_1(1.89447,0,0) = 0.586022 after 4 iters
+MPB solved for omega_1(1.89447,0,0) = 0.586022 after 1 iters
+Dominant planewave for band 1: (1.894467,-0.000000,0.000000)
+MPB solved for omega_1(2.04866,0,0) = 0.629115 after 31 iters
+MPB solved for omega_1(1.91383,0,0) = 0.591428 after 10 iters
+MPB solved for omega_1(1.91372,0,0) = 0.591398 after 4 iters
+MPB solved for omega_1(1.91372,0,0) = 0.591398 after 1 iters
+Dominant planewave for band 1: (1.913720,-0.000000,0.000000)
+MPB solved for omega_1(2.06729,0,0) = 0.634325 after 28 iters
+MPB solved for omega_1(1.93307,0,0) = 0.596804 after 10 iters
+MPB solved for omega_1(1.93297,0,0) = 0.596774 after 4 iters
+MPB solved for omega_1(1.93297,0,0) = 0.596774 after 1 iters
+Dominant planewave for band 1: (1.932968,-0.000000,0.000000)
+MPB solved for omega_1(2.08591,0,0) = 0.639536 after 28 iters
+MPB solved for omega_1(1.95232,0,0) = 0.60218 after 10 iters
+MPB solved for omega_1(1.95221,0,0) = 0.602151 after 4 iters
+MPB solved for omega_1(1.95221,0,0) = 0.602151 after 1 iters
+Dominant planewave for band 1: (1.952212,-0.000000,0.000000)
+MPB solved for omega_1(2.10453,0,0) = 0.644749 after 32 iters
+MPB solved for omega_1(1.97156,0,0) = 0.607556 after 10 iters
+MPB solved for omega_1(1.97145,0,0) = 0.607527 after 4 iters
+MPB solved for omega_1(1.97145,0,0) = 0.607527 after 1 iters
+Dominant planewave for band 1: (1.971452,-0.000000,0.000000)
+MPB solved for omega_1(2.12316,0,0) = 0.649962 after 27 iters
+MPB solved for omega_1(1.99079,0,0) = 0.612932 after 10 iters
+MPB solved for omega_1(1.99069,0,0) = 0.612903 after 4 iters
+MPB solved for omega_1(1.99069,0,0) = 0.612903 after 1 iters
+Dominant planewave for band 1: (1.990687,-0.000000,0.000000)
+MPB solved for omega_1(2.14178,0,0) = 0.655177 after 26 iters
+MPB solved for omega_1(2.01002,0,0) = 0.618308 after 10 iters
+MPB solved for omega_1(2.00992,0,0) = 0.61828 after 4 iters
+MPB solved for omega_1(2.00992,0,0) = 0.61828 after 1 iters
+Dominant planewave for band 1: (2.009918,-0.000000,0.000000)
+MPB solved for omega_1(2.16041,0,0) = 0.660393 after 25 iters
+MPB solved for omega_1(2.02924,0,0) = 0.623684 after 10 iters
+MPB solved for omega_1(2.02915,0,0) = 0.623656 after 3 iters
+MPB solved for omega_1(2.02915,0,0) = 0.623656 after 1 iters
+Dominant planewave for band 1: (2.029145,-0.000000,0.000000)
+MPB solved for omega_1(2.17903,0,0) = 0.66561 after 32 iters
+MPB solved for omega_1(2.04847,0,0) = 0.62906 after 10 iters
+MPB solved for omega_1(2.04837,0,0) = 0.629032 after 3 iters
+MPB solved for omega_1(2.04837,0,0) = 0.629032 after 1 iters
+Dominant planewave for band 1: (2.048367,-0.000000,0.000000)
+MPB solved for omega_1(2.19766,0,0) = 0.670828 after 29 iters
+MPB solved for omega_1(2.06768,0,0) = 0.634436 after 10 iters
+MPB solved for omega_1(2.06759,0,0) = 0.634409 after 3 iters
+MPB solved for omega_1(2.06759,0,0) = 0.634409 after 1 iters
+Dominant planewave for band 1: (2.067585,-0.000000,0.000000)
+MPB solved for omega_1(2.21628,0,0) = 0.676047 after 37 iters
+MPB solved for omega_1(2.08689,0,0) = 0.639812 after 10 iters
+MPB solved for omega_1(2.0868,0,0) = 0.639785 after 3 iters
+MPB solved for omega_1(2.0868,0,0) = 0.639785 after 1 iters
+Dominant planewave for band 1: (2.086799,-0.000000,0.000000)
+MPB solved for omega_1(2.2349,0,0) = 0.681268 after 36 iters
+MPB solved for omega_1(2.1061,0,0) = 0.645188 after 10 iters
+MPB solved for omega_1(2.10601,0,0) = 0.645161 after 3 iters
+MPB solved for omega_1(2.10601,0,0) = 0.645161 after 1 iters
+Dominant planewave for band 1: (2.106008,-0.000000,0.000000)
+MPB solved for omega_1(2.25353,0,0) = 0.686489 after 28 iters
+MPB solved for omega_1(2.12531,0,0) = 0.650564 after 10 iters
+MPB solved for omega_1(2.12521,0,0) = 0.650538 after 3 iters
+MPB solved for omega_1(2.12521,0,0) = 0.650538 after 1 iters
+Dominant planewave for band 1: (2.125213,-0.000000,0.000000)
+MPB solved for omega_1(2.27215,0,0) = 0.691711 after 37 iters
+MPB solved for omega_1(2.14451,0,0) = 0.65594 after 10 iters
+MPB solved for omega_1(2.14441,0,0) = 0.655914 after 3 iters
+MPB solved for omega_1(2.14441,0,0) = 0.655914 after 1 iters
+Dominant planewave for band 1: (2.144414,-0.000000,0.000000)
+MPB solved for omega_1(2.29078,0,0) = 0.696935 after 27 iters
+MPB solved for omega_1(2.1637,0,0) = 0.661316 after 10 iters
+MPB solved for omega_1(2.16361,0,0) = 0.66129 after 3 iters
+MPB solved for omega_1(2.16361,0,0) = 0.66129 after 1 iters
+Dominant planewave for band 1: (2.163611,-0.000000,0.000000)
+MPB solved for omega_1(2.3094,0,0) = 0.70216 after 28 iters
+MPB solved for omega_1(2.18289,0,0) = 0.666692 after 10 iters
+MPB solved for omega_1(2.1828,0,0) = 0.666667 after 3 iters
+MPB solved for omega_1(2.1828,0,0) = 0.666667 after 1 iters
+Dominant planewave for band 1: (2.182803,-0.000000,0.000000)
+MPB solved for omega_1(2.32803,0,0) = 0.707385 after 33 iters
+MPB solved for omega_1(2.20208,0,0) = 0.672068 after 10 iters
+MPB solved for omega_1(2.20199,0,0) = 0.672043 after 3 iters
+MPB solved for omega_1(2.20199,0,0) = 0.672043 after 1 iters
+Dominant planewave for band 1: (2.201991,-0.000000,0.000000)
+MPB solved for omega_1(2.34665,0,0) = 0.712612 after 33 iters
+MPB solved for omega_1(2.22126,0,0) = 0.677444 after 10 iters
+MPB solved for omega_1(2.22118,0,0) = 0.677419 after 3 iters
+MPB solved for omega_1(2.22118,0,0) = 0.677419 after 1 iters
+Dominant planewave for band 1: (2.221175,-0.000000,0.000000)
+MPB solved for omega_1(2.36527,0,0) = 0.71784 after 39 iters
+MPB solved for omega_1(2.24044,0,0) = 0.68282 after 10 iters
+MPB solved for omega_1(2.24036,0,0) = 0.682796 after 3 iters
+MPB solved for omega_1(2.24036,0,0) = 0.682796 after 1 iters
+Dominant planewave for band 1: (2.240355,-0.000000,0.000000)
+MPB solved for omega_1(2.3839,0,0) = 0.723069 after 35 iters
+MPB solved for omega_1(2.25962,0,0) = 0.688196 after 10 iters
+MPB solved for omega_1(2.25953,0,0) = 0.688172 after 3 iters
+MPB solved for omega_1(2.25953,0,0) = 0.688172 after 1 iters
+Dominant planewave for band 1: (2.259531,-0.000000,0.000000)
+MPB solved for omega_1(2.40252,0,0) = 0.728299 after 33 iters
+MPB solved for omega_1(2.27879,0,0) = 0.693572 after 10 iters
+MPB solved for omega_1(2.2787,0,0) = 0.693548 after 3 iters
+MPB solved for omega_1(2.2787,0,0) = 0.693548 after 1 iters
+Dominant planewave for band 1: (2.278703,-0.000000,0.000000)
+MPB solved for omega_1(2.42115,0,0) = 0.73353 after 37 iters
+MPB solved for omega_1(2.29795,0,0) = 0.698948 after 10 iters
+MPB solved for omega_1(2.29787,0,0) = 0.698925 after 3 iters
+MPB solved for omega_1(2.29787,0,0) = 0.698925 after 1 iters
+Dominant planewave for band 1: (2.297870,-0.000000,0.000000)
+MPB solved for omega_1(2.43977,0,0) = 0.738762 after 36 iters
+MPB solved for omega_1(2.31711,0,0) = 0.704324 after 10 iters
+MPB solved for omega_1(2.31703,0,0) = 0.704301 after 3 iters
+MPB solved for omega_1(2.31703,0,0) = 0.704301 after 1 iters
+Dominant planewave for band 1: (2.317033,-0.000000,0.000000)
+MPB solved for omega_1(2.45839,0,0) = 0.743995 after 28 iters
+MPB solved for omega_1(2.33627,0,0) = 0.7097 after 10 iters
+MPB solved for omega_1(2.33619,0,0) = 0.709677 after 3 iters
+MPB solved for omega_1(2.33619,0,0) = 0.709677 after 1 iters
+Dominant planewave for band 1: (2.336193,-0.000000,0.000000)
+MPB solved for omega_1(0,2.01141,0) = 0.618698 after 21 iters
+MPB solved for omega_1(0,1.87532,0) = 0.580676 after 7 iters
+MPB solved for omega_1(0,1.87521,0) = 0.580645 after 3 iters
+MPB solved for omega_1(0,1.87521,0) = 0.580645 after 1 iters
+Dominant planewave for band 1: (0.000000,1.875210,0.000000)
+MPB solved for omega_1(0,2.03004,0) = 0.623906 after 25 iters
+MPB solved for omega_1(0,1.89458,0) = 0.586052 after 7 iters
+MPB solved for omega_1(0,1.89447,0) = 0.586022 after 3 iters
+MPB solved for omega_1(0,1.89447,0) = 0.586022 after 1 iters
+Dominant planewave for band 1: (0.000000,1.894467,0.000000)
+MPB solved for omega_1(0,2.04866,0) = 0.629115 after 29 iters
+MPB solved for omega_1(0,1.91383,0) = 0.591428 after 7 iters
+MPB solved for omega_1(0,1.91372,0) = 0.591398 after 3 iters
+MPB solved for omega_1(0,1.91372,0) = 0.591398 after 1 iters
+Dominant planewave for band 1: (0.000000,1.913720,0.000000)
+MPB solved for omega_1(0,2.06729,0) = 0.634325 after 25 iters
+MPB solved for omega_1(0,1.93307,0) = 0.596804 after 7 iters
+MPB solved for omega_1(0,1.93297,0) = 0.596774 after 3 iters
+MPB solved for omega_1(0,1.93297,0) = 0.596774 after 1 iters
+Dominant planewave for band 1: (0.000000,1.932968,0.000000)
+MPB solved for omega_1(0,2.08591,0) = 0.639536 after 26 iters
+MPB solved for omega_1(0,1.95232,0) = 0.60218 after 7 iters
+MPB solved for omega_1(0,1.95221,0) = 0.602151 after 3 iters
+MPB solved for omega_1(0,1.95221,0) = 0.602151 after 1 iters
+Dominant planewave for band 1: (0.000000,1.952212,0.000000)
+MPB solved for omega_1(0,2.10453,0) = 0.644749 after 25 iters
+MPB solved for omega_1(0,1.97156,0) = 0.607556 after 7 iters
+MPB solved for omega_1(0,1.97145,0) = 0.607527 after 3 iters
+MPB solved for omega_1(0,1.97145,0) = 0.607527 after 1 iters
+Dominant planewave for band 1: (0.000000,1.971452,0.000000)
+MPB solved for omega_1(0,2.12316,0) = 0.649962 after 29 iters
+MPB solved for omega_1(0,1.99079,0) = 0.612932 after 7 iters
+MPB solved for omega_1(0,1.99069,0) = 0.612903 after 3 iters
+MPB solved for omega_1(0,1.99069,0) = 0.612903 after 1 iters
+Dominant planewave for band 1: (0.000000,1.990687,0.000000)
+MPB solved for omega_1(0,2.14178,0) = 0.655177 after 25 iters
+MPB solved for omega_1(0,2.01002,0) = 0.618308 after 7 iters
+MPB solved for omega_1(0,2.00992,0) = 0.61828 after 3 iters
+MPB solved for omega_1(0,2.00992,0) = 0.61828 after 1 iters
+Dominant planewave for band 1: (0.000000,2.009918,0.000000)
+MPB solved for omega_1(0,2.16041,0) = 0.660393 after 29 iters
+MPB solved for omega_1(0,2.02924,0) = 0.623684 after 7 iters
+MPB solved for omega_1(0,2.02915,0) = 0.623656 after 3 iters
+MPB solved for omega_1(0,2.02915,0) = 0.623656 after 1 iters
+Dominant planewave for band 1: (0.000000,2.029145,0.000000)
+MPB solved for omega_1(0,2.17903,0) = 0.66561 after 26 iters
+MPB solved for omega_1(0,2.04847,0) = 0.62906 after 7 iters
+MPB solved for omega_1(0,2.04837,0) = 0.629032 after 3 iters
+MPB solved for omega_1(0,2.04837,0) = 0.629032 after 1 iters
+Dominant planewave for band 1: (0.000000,2.048367,0.000000)
+MPB solved for omega_1(0,2.19766,0) = 0.670828 after 25 iters
+MPB solved for omega_1(0,2.06768,0) = 0.634436 after 7 iters
+MPB solved for omega_1(0,2.06759,0) = 0.634409 after 3 iters
+MPB solved for omega_1(0,2.06759,0) = 0.634409 after 1 iters
+Dominant planewave for band 1: (0.000000,2.067585,0.000000)
+MPB solved for omega_1(0,2.21628,0) = 0.676047 after 33 iters
+MPB solved for omega_1(0,2.08689,0) = 0.639812 after 7 iters
+MPB solved for omega_1(0,2.0868,0) = 0.639785 after 3 iters
+MPB solved for omega_1(0,2.0868,0) = 0.639785 after 1 iters
+Dominant planewave for band 1: (0.000000,2.086799,0.000000)
+MPB solved for omega_1(0,2.2349,0) = 0.681268 after 29 iters
+MPB solved for omega_1(0,2.1061,0) = 0.645188 after 7 iters
+MPB solved for omega_1(0,2.10601,0) = 0.645161 after 3 iters
+MPB solved for omega_1(0,2.10601,0) = 0.645161 after 1 iters
+Dominant planewave for band 1: (0.000000,2.106008,0.000000)
+MPB solved for omega_1(0,2.25353,0) = 0.686489 after 34 iters
+MPB solved for omega_1(0,2.12531,0) = 0.650564 after 7 iters
+MPB solved for omega_1(0,2.12521,0) = 0.650538 after 3 iters
+MPB solved for omega_1(0,2.12521,0) = 0.650538 after 1 iters
+Dominant planewave for band 1: (0.000000,2.125213,0.000000)
+MPB solved for omega_1(0,2.27215,0) = 0.691711 after 28 iters
+MPB solved for omega_1(0,2.14451,0) = 0.65594 after 7 iters
+MPB solved for omega_1(0,2.14441,0) = 0.655914 after 3 iters
+MPB solved for omega_1(0,2.14441,0) = 0.655914 after 1 iters
+Dominant planewave for band 1: (0.000000,2.144414,0.000000)
+MPB solved for omega_1(0,2.29078,0) = 0.696935 after 28 iters
+MPB solved for omega_1(0,2.1637,0) = 0.661316 after 7 iters
+MPB solved for omega_1(0,2.16361,0) = 0.66129 after 3 iters
+MPB solved for omega_1(0,2.16361,0) = 0.66129 after 1 iters
+Dominant planewave for band 1: (0.000000,2.163611,0.000000)
+MPB solved for omega_1(0,2.3094,0) = 0.70216 after 30 iters
+MPB solved for omega_1(0,2.18289,0) = 0.666692 after 7 iters
+MPB solved for omega_1(0,2.1828,0) = 0.666667 after 3 iters
+MPB solved for omega_1(0,2.1828,0) = 0.666667 after 1 iters
+Dominant planewave for band 1: (0.000000,2.182803,0.000000)
+MPB solved for omega_1(0,2.32803,0) = 0.707385 after 36 iters
+MPB solved for omega_1(0,2.20208,0) = 0.672068 after 7 iters
+MPB solved for omega_1(0,2.20199,0) = 0.672043 after 3 iters
+MPB solved for omega_1(0,2.20199,0) = 0.672043 after 1 iters
+Dominant planewave for band 1: (0.000000,2.201991,0.000000)
+MPB solved for omega_1(0,2.34665,0) = 0.712612 after 32 iters
+MPB solved for omega_1(0,2.22126,0) = 0.677444 after 7 iters
+MPB solved for omega_1(0,2.22118,0) = 0.677419 after 3 iters
+MPB solved for omega_1(0,2.22118,0) = 0.677419 after 1 iters
+Dominant planewave for band 1: (0.000000,2.221175,0.000000)
+MPB solved for omega_1(0,2.36527,0) = 0.71784 after 26 iters
+MPB solved for omega_1(0,2.24044,0) = 0.68282 after 7 iters
+MPB solved for omega_1(0,2.24036,0) = 0.682796 after 3 iters
+MPB solved for omega_1(0,2.24036,0) = 0.682796 after 1 iters
+Dominant planewave for band 1: (0.000000,2.240355,0.000000)
+MPB solved for omega_1(0,2.3839,0) = 0.723069 after 31 iters
+MPB solved for omega_1(0,2.25962,0) = 0.688196 after 7 iters
+MPB solved for omega_1(0,2.25953,0) = 0.688172 after 3 iters
+MPB solved for omega_1(0,2.25953,0) = 0.688172 after 1 iters
+Dominant planewave for band 1: (0.000000,2.259531,0.000000)
+MPB solved for omega_1(0,2.40252,0) = 0.728299 after 28 iters
+MPB solved for omega_1(0,2.27879,0) = 0.693572 after 6 iters
+MPB solved for omega_1(0,2.2787,0) = 0.693548 after 3 iters
+MPB solved for omega_1(0,2.2787,0) = 0.693548 after 1 iters
+Dominant planewave for band 1: (0.000000,2.278703,0.000000)
+MPB solved for omega_1(0,2.42115,0) = 0.73353 after 34 iters
+MPB solved for omega_1(0,2.29795,0) = 0.698948 after 6 iters
+MPB solved for omega_1(0,2.29787,0) = 0.698925 after 3 iters
+MPB solved for omega_1(0,2.29787,0) = 0.698925 after 1 iters
+Dominant planewave for band 1: (0.000000,2.297870,0.000000)
+MPB solved for omega_1(0,2.43977,0) = 0.738762 after 24 iters
+MPB solved for omega_1(0,2.31711,0) = 0.704324 after 6 iters
+MPB solved for omega_1(0,2.31703,0) = 0.704301 after 3 iters
+MPB solved for omega_1(0,2.31703,0) = 0.704301 after 1 iters
+Dominant planewave for band 1: (0.000000,2.317033,0.000000)
+MPB solved for omega_1(0,2.45839,0) = 0.743995 after 34 iters
+MPB solved for omega_1(0,2.33627,0) = 0.7097 after 6 iters
+MPB solved for omega_1(0,2.33619,0) = 0.709677 after 3 iters
+MPB solved for omega_1(0,2.33619,0) = 0.709677 after 1 iters
+Dominant planewave for band 1: (0.000000,2.336193,0.000000)
+----------------------------------
+Parameters: radius=1.5
+Frequencies: [0.58064516 0.58602151 0.59139785 0.59677419 0.60215054 0.60752688
+ 0.61290323 0.61827957 0.62365591 0.62903226 0.6344086  0.63978495
+ 0.64516129 0.65053763 0.65591398 0.66129032 0.66666667 0.67204301
+ 0.67741935 0.6827957  0.68817204 0.69354839 0.69892473 0.70430108
+ 0.70967742]
+Transmitted fraction: [0.84844112 0.84787783 0.84734503 0.84684284 0.84636978 0.84592266
+ 0.84549705 0.84508794 0.84469021 0.84429946 0.84391258 0.84352791
+ 0.8431449  0.84276322 0.84238206 0.84199956 0.84161269 0.84121761
+ 0.84081034 0.84038741 0.83994634 0.83948554 0.83900374 0.83849944
+ 0.83797113]
+Reflected fraction: [8.16687805e-06 8.16620142e-06 7.24839225e-06 5.66518479e-06
+ 3.78117497e-06 1.99254431e-06 6.59391645e-07 5.88917681e-08
+ 3.58403274e-07 1.60352433e-06 3.71627371e-06 6.50179230e-06
+ 9.66535075e-06 1.28428374e-05 1.56460880e-05 1.77196586e-05
+ 1.88000625e-05 1.87644050e-05 1.76546662e-05 1.56690880e-05
+ 1.31200789e-05 1.03682224e-05 7.74904030e-06 5.51176572e-06
+ 3.78652026e-06]
+
+Elapsed run time = 54.7488 s
