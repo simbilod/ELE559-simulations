@@ -1,0 +1,21 @@
+# YAML 1.2
+---
+abstract: " Workshop on photonic device and circuit simulation using open-source tools. Originally created for Princeton's Spring 2020 ELE559 : Photonic Systems class. "
+authors: 
+  -
+    family-names: Bilodeau
+    given-names: Simon
+  -
+    family-names: "Ferreira de Lima"
+    given-names: Thomas
+  -
+    family-names: Josh
+    given-names: Lederman
+cff-version: "1.1.0"
+date-released: 2021-03-19
+license: "GPL-3.0"
+message: "If you use this software, please cite it using these metadata."
+repository-code: "https://github.com/simbilod/ELE559-simulations"
+title: "ELE559-simulations"
+version: "0.2"
+...
